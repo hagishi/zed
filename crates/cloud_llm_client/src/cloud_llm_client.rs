@@ -91,6 +91,7 @@ pub enum PlanV2 {
     #[default]
     ZedFree,
     ZedPro,
+    ZedProStudent,
     ZedProTrial,
 }
 
@@ -102,6 +103,7 @@ impl FromStr for PlanV2 {
             "zed_free" => Ok(Self::ZedFree),
             "zed_pro" => Ok(Self::ZedPro),
             "zed_pro_trial" => Ok(Self::ZedProTrial),
+            "zed_pro_student" => Ok(Self::ZedProStudent),
             plan => Err(anyhow::anyhow!("invalid plan: {plan:?}")),
         }
     }
